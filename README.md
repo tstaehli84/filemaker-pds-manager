@@ -23,7 +23,7 @@ The manager's own code is stored at **`addons` / `PDS-Manager.HTML`**. No data t
 - **FileMaker Pro 26.0.3 or newer**, on macOS or Windows.
 - A developer account with Full Access for installation and PDS management.
 
-The interface is designed for desktop use. It displays stored text/code; it does not preview or decode binary/container files. Uploading currently supports HTML, JavaScript, and CSS source files.
+The interface is designed for desktop use. It displays stored text/code; it does not preview or decode binary/container files. Upload UTF-8 text files, including HTML, JavaScript, CSS, JSON, and other source code
 
 ## Downloads
 
