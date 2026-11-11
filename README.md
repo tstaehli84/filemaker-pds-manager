@@ -39,6 +39,10 @@ Both ZIP downloads contain the same add-on. The Windows installer adds `Install.
 
 ## Installation
 
+### Native .fmaddon package
+
+Double-click **PDS_Manager.fmaddon** to install it in the local add-on library. If FileMaker displays a file-format/translator error, use either ZIP method above.
+
 ### Windows — installer
 
 1. Download and extract the entire **Windows Installer ZIP**.
@@ -69,10 +73,6 @@ If your organization blocks downloaded scripts, use the manual method instead.
 Create `AddonModules` if needed. Place the folder so its structure is `AddonModules/PDS_Manager/info.json`, without an extra enclosing folder.
 
 4. Reopen FileMaker Pro.
-
-### Native .fmaddon package
-
-Double-click **PDS_Manager.fmaddon** to install it in the local add-on library. If FileMaker displays a file-format/translator error, use either ZIP method above.
 
 ### Add it to a FileMaker solution
 
