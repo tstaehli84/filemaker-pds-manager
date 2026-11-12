@@ -31,9 +31,9 @@ Choose **one** installation method:
 
 | File | Platform | Purpose |
 | --- | --- | --- |
-| [PDS_Manager.fmaddon](./PDS_Manager.fmaddon) | FileMaker add-on package | Native distribution package; manual installation is available if opening it fails. |
-| [PDS_Manager-Windows-Installer.zip](./PDS_Manager-Windows-Installer.zip) | Windows | Includes an installer script that copies the add-on to the correct folder. |
-| [PDS_Manager-Manual-Install.zip](./PDS_Manager-Manual-Install.zip) | macOS and Windows | Contains the add-on folder for manual installation. |
+| [PDS_Manager.fmaddon](./PDS_Manager.fmaddon?raw=true) | FileMaker add-on package | Native distribution package; manual installation is available if opening it fails. |
+| [PDS_Manager-Windows-Installer.zip](./PDS_Manager-Windows-Installer.zip?raw=true) | Windows | Includes an installer script that copies the add-on to the correct folder. |
+| [PDS_Manager-Manual-Install.zip](./PDS_Manager-Manual-Install.zip?raw=true) | macOS and Windows | Contains the add-on folder for manual installation. |
 
 Both ZIP downloads contain the same add-on. The Windows installer adds `Install.cmd` for convenience. It installs the local add-on library files; it does not modify your FileMaker solution automatically.
 
