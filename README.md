@@ -14,16 +14,16 @@ Built by **Thomas Staehli** · [Contact](mailto:thomas.staehli@mac.com)
 - Delete entries with a dedicated button.
 - Protect the manager's own HTML from deletion through the manager.
 - Resize the content area with the Web Viewer.
-- Read the built-in instructions for adding another PDS Name.
+- Read the built-in instructions for adding, updating, deleting, and copying entries, and adding another PDS Name.
 
-The manager's own code is stored at **`addons` / `PDS-Manager.HTML`**. No data table is required by the add-on.
+The manager's own code is stored at **`widgets` / `pds-manager.html`**. No data table is required by the add-on.
 
 ## Requirements
 
 - **FileMaker Pro 26.0.3 or newer**, on macOS or Windows.
 - A developer account with Full Access for installation and PDS management.
 
-The interface is designed for desktop use. It displays stored text/code; it does not preview or decode binary/container files. Upload UTF-8 text files, including HTML, JavaScript, CSS, JSON, and other source code
+The interface is designed for desktop use. It displays stored text/code; it does not preview or decode binary/container files. Upload UTF-8 text files, including HTML, JavaScript, CSS, JSON, and other source code.
 
 ## Downloads
 
@@ -89,18 +89,18 @@ Create `AddonModules` if needed. Place the folder so its structure is `AddonModu
 
 To add an entry, select a PDS Name, click **New entry**, enter a new Instance ID, and click **Add file**.
 
-The content area is intentionally read-only: upload a replacement file to change the stored content. The manager refreshes the current content and ID list after its actions.
+The content area is intentionally read-only: upload a replacement file to change the stored content. After adding or updating an entry, the manager refreshes the ID list and displays that entry. After deletion, it keeps the PDS Name selected and clears the Instance ID and content.
 
-Deletion of **`addons` / `PDS-Manager.HTML`** is blocked by the manager to protect its own code. Other scripts that access the PDS directly remain responsible for their own safeguards.
+Deletion of **`widgets` / `pds-manager.html`** is blocked by the manager to protect its own code. Other scripts that access the PDS directly remain responsible for their own safeguards.
 
 ## Add another PDS Name
 
-The initial names are `widgets` and `addons`.
+The initial PDS Name is `widgets`. Additional names can be added to the Web Viewer calculation.
 
 1. In the Web Viewer's address calculation, extend the list at the beginning of the `While` loop:
 
    ```filemaker
-   names = List ( "widgets" ; "addons" ; "NEW VALUE" )
+   names = List ( "widgets" ; "NEW VALUE" )
    ```
 
 2. In **PDS.Value.Update** and **PDS.Value.Delete**, find the comment about adding additional PDS Names. Copy an existing `Else If` branch and change **both** its name comparison and the literal name in its **Configure Persistent Data** step.
@@ -112,7 +112,7 @@ The HTML does not need changing to add a name.
 
 FileMaker may retain existing PDS values when an add-on is uninstalled and reinstalled. Do not assume reinstalling replaces the manager's stored HTML.
 
-When updating, verify that **`addons` / `PDS-Manager.HTML`** contains the intended version; upload the new manager HTML explicitly if required. If completely removing the manager, remove that entry explicitly through a developer script when appropriate. Preserve unrelated PDS entries.
+When updating, verify that **`widgets` / `pds-manager.html`** contains the intended version; upload the new manager HTML explicitly if required. If completely removing the manager, remove that entry explicitly through a developer script when appropriate. Preserve unrelated PDS entries.
 
 Replacing files in the local `AddonModules` folder updates the available package, not an add-on already installed in a FileMaker solution.
 
